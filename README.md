@@ -1,4 +1,4 @@
-Website for a funny guy
+Website for a Funny Guy
 =======================
 
 Written with AngularJS framework
