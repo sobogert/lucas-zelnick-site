@@ -1,0 +1,93 @@
+{
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "apps/lucas-zelnick-site/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/lucas-zelnick-site",
+        "index": "apps/lucas-zelnick-site/src/index.html",
+        "main": "apps/lucas-zelnick-site/src/main.ts",
+        "polyfills": "apps/lucas-zelnick-site/src/polyfills.ts",
+        "tsConfig": "apps/lucas-zelnick-site/tsconfig.app.json",
+        "assets": [
+          "apps/lucas-zelnick-site/src/favicon.ico",
+          "apps/lucas-zelnick-site/src/assets"
+        ],
+        "styles": [
+          "apps/lucas-zelnick-site/src/styles.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/lucas-zelnick-site/src/environments/environment.ts",
+              "with": "apps/lucas-zelnick-site/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "lucas-zelnick-site:build:production"
+        },
+        "development": {
+          "browserTarget": "lucas-zelnick-site:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "lucas-zelnick-site:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/lucas-zelnick-site/src/test.ts",
+        "polyfills": "apps/lucas-zelnick-site/src/polyfills.ts",
+        "tsConfig": "apps/lucas-zelnick-site/tsconfig.spec.json",
+        "karmaConfig": "apps/lucas-zelnick-site/karma.conf.js",
+        "assets": [
+          "apps/lucas-zelnick-site/src/favicon.ico",
+          "apps/lucas-zelnick-site/src/assets"
+        ],
+        "styles": [
+          "apps/lucas-zelnick-site/src/styles.css"
+        ],
+        "scripts": []
+      }
+    }
+  }
+}
