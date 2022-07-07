@@ -1,2 +1,5 @@
-# temp
-Temp holding for my website
+Website for a funny guy
+=======================
+
+Written with AngularJS framework
+
