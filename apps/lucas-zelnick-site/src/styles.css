@@ -1,1 +1,170 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  background: #d3814f;
+  --1-onyx: #393D3F;
+  --1-copper-rose: #976D74;
+  --1-mauvelous: #F59CA9;
+  --1-metallic-sunburst: #9C8F4B;
+  --1-mustard: #FFE156;
+  --1-morning-blue: #9BACAB;
+  --1-un-blue: #6992D5;
+  --1-blue-crayon: #3777FF;
+  --1-wint-dream: #59836F;
+  --1-shin-sherlock: #69A687;
+  --1-eton-blue: #79C99E;
+  --1-honey: #F6AE2D;
+  --1-citric: #cdf567;
+
+  --2-lime : #bcd458;
+  --2-magenta: #fd5589;
+  --2-tan: #d3814f;
+  --2-dark-magenta: #a62745;
+  --2-black: #102c20;
+  --2-burple: #8d9aca;
+  --2-groon: #82a83c;
+  --2-eurange: #cc7256;
+  --2-bleaux: #4ca6de;
+}
+
+
+h2 {
+  font-size: 38pt;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  text-shadow: 0 2px var(--1-honey), 2px 0 var(--1-honey), -2px 0 var(--1-mauvelous), 1px 1px var(--1-honey), -1px -1px var(--1-honey), -1px 1px var(--1-honey), 1px -1px var(--1-honey);
+}
+
+.head {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  /*border-right: 10px solid #59836F;*/
+  /*border-bottom: 10px solid #59836F;*/
+  /*border-top-right-radius: 10px;*/
+  /*border-bottom-left-radius: 10px;*/
+  margin-bottom: 2vh;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.title-link {
+  font-size: 70pt;
+  font-family: 'Rubik Mono One', sans-serif;
+  text-shadow: 2px 5px var(--2-lime), 5px 3px var(--2-lime), 5px 2px var(--2-lime), 5px 5px var(--2-lime);
+  background: none;
+  border: none;
+}
+
+.title-link:hover {
+  text-shadow: 0 5px var(--1-shin-sherlock), 5px 0 var(--1-shin-sherlock), 5px 5px var(--1-shin-sherlock);
+}
+
+.small-nav-btn {
+  visibility: hidden;
+}
+
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-items: center;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  /*background: linear-gradient(90deg, #A62745FF 0%, #5a2a32 10%, #102C20 15%, #11261d 26%, #11261d 71%, #102C20 75%, #5a2a32 92%, #A62745FF 100%);*/
+}
+
+.name-link {
+  text-decoration: none;
+}
+
+.z-photo {
+  border: 18px solid var(--2-lime);
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 575px) {
+  .body {
+    font-size: calc((1.1 - 1) * 1.1vh + 1rem);
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: rgb(180,38,81);
+    background: linear-gradient(0deg, rgba(180,38,81,1) 0%, #0c261d 18%, #0c261d 91%, rgba(218,36,97,1) 100%);
+  }
+  .z-photo {
+    display: flex;
+    border: none;
+    position: absolute;
+    margin-top: 60px;
+    border-radius: 0;
+    align-self: center;
+    justify-self: center;
+    overflow-x: hidden;
+  }
+
+  .head {
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: flex-start;
+    justify-self: flex-start;
+    align-items: flex-start;
+    justify-items: flex-start;
+    width:100%;
+    overflow-x: clip;
+  }
+  .title-link {
+    font-size: calc((4.2 - 1) * 1.2vh + 1rem);
+    flex-shrink: 3;
+    -webkit-flex-shrink: 3;
+    align-self: center;
+    z-index: 10;
+    color: #aeeb72;
+    word-wrap: anywhere;
+    text-align: left;
+    text-shadow:  4px 0 var(--2-bleaux), 8px 0 var(--2-eurange), 12px 0 var(--2-burple);
+    margin-top: 0;
+    padding-inline: 0;
+    margin-bottom: 1px;
+    width: 590px;
+    border: 1px solid black;
+  }
+  .btn-1 {
+    display: flex;
+    background-color: var(--2-magenta);
+  }
+  .small-nav-btn {
+    visibility: visible;
+    z-index: 10;
+    padding: 0 5px 0 0;
+    margin-top: -10px;
+    background: transparent;
+    border: 1px solid black;
+    font-weight: 900;
+    font-size: 35pt;
+    color: var(--1-wint-dream);
+    text-shadow: 2px 2px var(--1-citric);
+  }
+  .small-nav-btn:hover {
+    text-shadow: 2px 2px var(--2-magenta);
+  }
+
+}
